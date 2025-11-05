@@ -35,7 +35,7 @@ public class OpenAPIAnalyzer {
                 && !openAPI.getComponents().getSecuritySchemes().isEmpty();
 
         if (!hasSecuritySchemes) {
-            issues.add("⚠️ [OWASP API1] Не определены схемы безопасности (securitySchemes).");
+            issues.add("[OWASP API1] Не определены схемы безопасности (securitySchemes).");
             return issues;
         }
 
@@ -78,7 +78,7 @@ public class OpenAPIAnalyzer {
                     }
 
                     issues.add(String.format(
-                            "🚨 [%s] %s %s — %s",
+                            "[%s] %s %s — %s",
                             "OWASP API1", method, path, explanation
                     ));
                 }
@@ -103,7 +103,7 @@ public class OpenAPIAnalyzer {
                             for (String keyword : sensitiveKeywords) {
                                 if (lowerProp.contains(keyword)) {
                                     issues.add(String.format(
-                                            "⚠️ [OWASP API3] Схема '%s' содержит потенциально чувствительное поле: '%s'",
+                                            "[OWASP API3] Схема '%s' содержит потенциально чувствительное поле: '%s'",
                                             schemaName, propName
                                     ));
                                     break;

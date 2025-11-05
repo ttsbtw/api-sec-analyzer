@@ -54,11 +54,11 @@ public class SpringInitApplication implements CommandLineRunner {
     }
 
     private static void reportAsText(List<String> issues) {
-        System.out.println("🔍 Анализ завершён.");
+        System.out.println("Анализ завершён.");
         if (issues.isEmpty()) {
-            System.out.println("✅ Нет найденных уязвимостей.");
+            System.out.println("Нет найденных уязвимостей.");
         } else {
-            System.out.println("🚨 Найдены проблемы:");
+            System.out.println("Найдены проблемы:");
             issues.forEach(System.out::println);
         }
     }

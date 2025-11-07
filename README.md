@@ -17,11 +17,11 @@
 
 ### 2. Анализ через консоль
 В bash пропишите:
-java -jar target/api-sec-analyzer-0.0.1.jar openapi.yaml (ваш API)
+java -jar target/api-sec-analyzer-0.0.1-SNAPSHOT.jar openapi.yaml (ваш API, заместо openapi.yaml)
 
 ### 3. Анализ c JSON выводом:
 В bash пропишите:
-java -jar target/api-sec-analyzer-0.0.1.jar openapi.yaml --format json
+java -jar target/api-sec-analyzer-0.0.1-SNAPSHOT.jar openapi.yaml --format json
 
 ### Примеры вывода:
 ТЕКСТ:
